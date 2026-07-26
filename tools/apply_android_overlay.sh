@@ -15,9 +15,9 @@ if [ ! -d "android" ]; then
 fi
 
 echo "Copiando arquivos Kotlin do widget..."
-mkdir -p android/app/src/main/kotlin/com/saulo/nossograndedia
-cp android_overlay/app/src/main/kotlin/com/saulo/nossograndedia/*.kt \
-   android/app/src/main/kotlin/com/saulo/nossograndedia/
+mkdir -p android/app/src/main/kotlin/com/saulo/nosso_grande_dia
+cp android_overlay/app/src/main/kotlin/com/saulo/nosso_grande_dia/*.kt \
+   android/app/src/main/kotlin/com/saulo/nosso_grande_dia/
 
 echo "Copiando layouts, xml e drawables do widget..."
 mkdir -p android/app/src/main/res/layout
