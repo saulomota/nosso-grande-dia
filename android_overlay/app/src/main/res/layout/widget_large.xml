@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/widget_background"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="💍 Nosso Grande Dia"
+        android:textColor="#D4AF37"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saulo ❤️ Ana"
+        android:textColor="#F5F1E6"
+        android:textSize="14sp"
+        android:layout_marginTop="6dp" />
+
+    <TextView
+        android:id="@+id/widget_large_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Faltam alguns dias"
+        android:textColor="#F1D98B"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/widget_large_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09/09/2026"
+        android:textColor="#B8BCC8"
+        android:textSize="12sp"
+        android:layout_marginTop="4dp" />
+</LinearLayout>

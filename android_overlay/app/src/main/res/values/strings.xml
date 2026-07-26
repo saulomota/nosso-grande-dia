@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_small_description">Contagem regressiva do Nosso Grande Dia (pequeno)</string>
+    <string name="widget_large_description">Contagem regressiva do Nosso Grande Dia (grande)</string>
+</resources>

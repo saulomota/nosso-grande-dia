@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/widget_background"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="💍"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nosso Dia"
+        android:textColor="#D4AF37"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp" />
+
+    <TextView
+        android:id="@+id/widget_small_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 dias"
+        android:textColor="#F5F1E6"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginTop="2dp" />
+</LinearLayout>

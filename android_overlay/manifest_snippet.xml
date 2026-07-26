@@ -1,0 +1,19 @@
+<!-- ===== INÍCIO: trecho inserido automaticamente pelo workflow (widgets Nosso Grande Dia) ===== -->
+<receiver android:name=".WeddingWidgetSmallProvider" android:exported="false">
+    <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+    </intent-filter>
+    <meta-data
+        android:name="android.appwidget.provider"
+        android:resource="@xml/widget_small_info" />
+</receiver>
+
+<receiver android:name=".WeddingWidgetLargeProvider" android:exported="false">
+    <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+    </intent-filter>
+    <meta-data
+        android:name="android.appwidget.provider"
+        android:resource="@xml/widget_large_info" />
+</receiver>
+<!-- ===== FIM: trecho inserido automaticamente pelo workflow ===== -->
