@@ -9,7 +9,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "android" / "app" / "src" / "main" / "AndroidManifest.xml"
 SNIPPET_FILE = ROOT / "android_overlay" / "manifest_snippet.xml"
 
-MARKER = "Nosso Grande Dia"
+MARKER = "WeddingWidgetSmallProvider"
 
 
 def main() -> None:
