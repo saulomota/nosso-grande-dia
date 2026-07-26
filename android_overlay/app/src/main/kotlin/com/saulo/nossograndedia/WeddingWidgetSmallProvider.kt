@@ -1,4 +1,4 @@
-package com.saulo.nossograndedia
+package com.saulo.nosso_grande_dia
 
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
