@@ -1,0 +1,64 @@
+name: Build APK - Nosso Grande Dia
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build APK (release)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v4
+
+      - name: Configurar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Configurar Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          flutter-version: '3.24.5'
+          cache: true
+
+      - name: Instalar dependências do projeto
+        run: flutter pub get
+
+      - name: Gerar a pasta android/ (flutter create)
+        run: |
+          flutter create --platforms=android --org com.saulo --project-name nosso_grande_dia .
+          flutter pub get
+
+      - name: Aplicar arquivos nativos do widget sobre a pasta android/
+        run: bash tools/apply_android_overlay.sh
+
+      - name: Analisar o código
+        run: flutter analyze || true
+
+      - name: Compilar o APK de release
+        run: flutter build apk --release
+
+      - name: Enviar o APK como artefato do workflow
+        uses: actions/upload-artifact@v4
+        with:
+          name: nosso-grande-dia-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
+          if-no-files-found: error
+
+      - name: Criar release no GitHub com o APK anexado
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: build-${{ github.run_number }}
+          name: "Nosso Grande Dia - build ${{ github.run_number }}"
+          files: build/app/outputs/flutter-apk/app-release.apk
+          generate_release_notes:
